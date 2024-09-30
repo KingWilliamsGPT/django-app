@@ -206,4 +206,4 @@ ENV/
 
 # mkdocs documentation
 /site
-
+xhtml/
