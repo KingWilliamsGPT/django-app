@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <!-- Title -->
+	<title>{% block title %}P English Literature{% endblock title %}</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="DexignZone">
+	<meta name="robots" content="">
+
+    {% comment %} 
+	<meta name="keywords" content="admin, admin dashboard, admin template, bootstrap, bootstrap 5, bootstrap 5 admin template, fitness, fitness admin, modern, responsive admin dashboard, sales dashboard, sass, ui kit, web app">
+	<meta name="description" content="Discover Gymove, the ultimate fitness solution that is designed to help you achieve a healthier lifestyle with its cutting-edge features and personalized programs. Gymove is a fully mobile-responsive admin dashboard template that provides the perfect blend of exercise, nutrition, and motivation. Begin your fitness journey today with Gymove and visit DexignZone for more information.">
+
+	<meta property="og:title" content="Gymove - Django Fitness Bootstrap Admin Dashboard Template">
+	<meta property="og:description" content="Discover Gymove, the ultimate fitness solution that is designed to help you achieve a healthier lifestyle with its cutting-edge features and personalized programs. Gymove is a fully mobile-responsive admin dashboard template that provides the perfect blend of exercise, nutrition, and motivation. Begin your fitness journey today with Gymove and visit DexignZone for more information.">
+	<meta property="og:image" content="../social-image.png">
+	<meta name="format-detection" content="telephone=no">
+    {% endcomment %}
+
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'logo.jpg' %}">
+	<link href="{% static 'vendor/bootstrap-select/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="../../../fonts.googleapis.com/css2160f.css?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+
+    {% block more_head %}{% endblock more_head %}
+    
+</head>
+
+<body {% block body_attrs %}class="h-100"{% endblock body_attrs %}>
+    
+    {% block contents %}{% endblock contents %}
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+	<script src="{% static 'vendor/global/global.min.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+	<script src="{% static 'js/custom.min.js' %}"></script>
+    <script src="{% static 'js/deznav-init.js' %}"></script>
+    {% block more_scripts %}{% endblock more_scripts %}
+</body>
+</html>
